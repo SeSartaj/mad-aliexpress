@@ -28,7 +28,11 @@ export default function Signup({ navigation }) {
 						<TextInput style={styles.input} placeholder="Email address" />
 					</View>
 					<View style={styles.inputcon}>
-						<TextInput style={styles.input} placeholder="Password" />
+						<TextInput
+							secureTextEntry={true}
+							style={styles.input}
+							placeholder="Password"
+						/>
 					</View>
 				</View>
 				<View style={styles.buttoncon}>
