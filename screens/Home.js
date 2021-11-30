@@ -41,10 +41,10 @@ export default function Home(props) {
 				}}
 			>
 				<Image
-					source={require("../assets/alibaba-512.png")}
+					source={require("../assets/aliexpress-icon.png")}
 					style={styles.icon}
 				/>
-				<Text style={styles.bigtext}>Alibaba </Text>
+				<Text style={styles.bigtext}>AliExpress </Text>
 			</View>
 
 			<View style={{ paddingBottom: 10 }}>

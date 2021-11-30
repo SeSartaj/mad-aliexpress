@@ -26,10 +26,10 @@ export default function Menu({ navigation }) {
 
 			<View style={{ flex: 1, alignItems: "center", paddingTop: 10 }}>
 				<Image
-					source={require("../assets/alibaba-512.png")}
+					source={require("../assets/aliexpress-icon.png")}
 					style={styles.icon}
 				/>
-				<Text style={styles.title}>Alibaba</Text>
+				<Text style={styles.title}>AliExpress</Text>
 			</View>
 
 			<View style={styles.buttoncon}>
@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
 		color: colors.text,
 	},
 	icon: {
-		width: 300,
-		height: 300,
+		width: 200,
+		height: 200,
 		paddingVertical: 20,
 		borderRadius: 20,
 	},
