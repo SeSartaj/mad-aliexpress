@@ -9,16 +9,18 @@ import {
 } from "react-native"
 import { TouchableOpacity } from "react-native-gesture-handler"
 import ProductBox from "../components/ProductBox"
-import Categories from "../assets/data/Categories"
-import Category from "../assets/data/Category"
-import Products from "../assets/data/Products"
+
 import CategoriesBar from "../components/CategoriesBar"
 import TopBar from "../components/TopBar"
 import colors from "../utilities/colors"
 
-export default function Home() {
+export default function Home(props) {
 	const [loadedCat, setLoadedCat] = useState("All")
 	const [retrievedCat, setRetrievedCat] = useState()
+
+	const Categories = props.route.params.Categories
+	const Category = props.route.params.Category
+	const Products = props.route.params.Products
 
 	useEffect(() => {
 		if (loadedCat === "All") {
@@ -26,7 +28,7 @@ export default function Home() {
 		} else {
 			setRetrievedCat(Category[loadedCat])
 		}
-	}, [loadedCat])
+	}, [loadedCat, Products])
 
 	return (
 		<SafeAreaView style={styles.page}>

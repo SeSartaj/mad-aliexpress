@@ -1,3 +1,29 @@
+function fetchCategory() {
+	// return fetch("http://127.0.0.1:1337/categories", {
+	return fetch("http://192.168.100.245:1337/categories", {
+		method: "GET",
+		headers: {
+			"Content-Type": "application/json",
+		},
+	})
+}
+
+export default async function getCategoriesIncludingProducts() {
+	try {
+		const Category = {}
+		const response = await fetchCategory()
+		const data = await response.json()
+		data.forEach((item) => {
+			Category[item.category] = item.products
+		})
+		console.log(Category, "from category.js")
+		return Category
+	} catch (error) {
+		throw new Error("cant load data from server", error)
+	}
+}
+
+/*
 export default {
   electronics: [
     {
@@ -274,3 +300,5 @@ export default {
     },
   ],
 };
+
+*/

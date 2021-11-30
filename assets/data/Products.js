@@ -1,3 +1,42 @@
+function fetchProducts() {
+	// return fetch("http://127.0.0.1:1337/products", {
+	return fetch("http://192.168.100.245:1337/products", {
+		method: "GET",
+		headers: {
+			"Content-Type": "application/json",
+		},
+	})
+}
+
+async function getProducts() {
+	try {
+		const products = []
+		const response = await fetchProducts()
+		// console.log(response)
+		const data = await response.json()
+		// console.log(data, "from products")
+
+		data.forEach((product) => {
+			products.push({
+				id: product.id,
+				title: product.title,
+				price: product.price,
+				description: product.description,
+				image: product.image,
+				rating: product.rating,
+				category: product.category.category,
+			})
+		})
+		console.log(products, "from products")
+		return products
+	} catch (error) {
+		throw new Error("cant load data from server", error)
+	}
+}
+
+export default getProducts
+
+/*
 export default [
   {
     id: 1,
@@ -266,3 +305,6 @@ export default [
     },
   },
 ];
+
+
+*/
