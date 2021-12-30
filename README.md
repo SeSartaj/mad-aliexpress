@@ -1,6 +1,6 @@
 # Aliexpress | Mobile App development With React Native
 
-Shopping mobile appication created with react native for school work
+Shopping mobile appication created with react native.
 
 ## How to Setup
 
