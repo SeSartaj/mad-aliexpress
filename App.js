@@ -12,6 +12,7 @@ import { Provider } from "react-redux"
 import { store } from "./redux/store"
 import Checkout from "./screens/Checkout"
 import Menu from "./screens/Menu"
+import FavoriteProducts from "./screens/favoriteProducts"
 
 import getCategories from "./assets/data/Categories"
 import getCategoriesIncludingProducts from "./assets/data/Category"
@@ -55,6 +56,11 @@ export default function App() {
 					>
 						<MainNavigator.Screen name="Signin" component={Signin} />
 						<MainNavigator.Screen name="Signup" component={Signup} />
+						<MainNavigator.Screen
+							name="Favorite"
+							component={FavoriteProducts}
+						/>
+
 						<MainNavigator.Screen
 							name="Home"
 							component={Home}

@@ -9,4 +9,4 @@ Shopping mobile appication created with react native for school work
 
 2. install dependencies using <code>yarn install</code>
 
-3. start the project using <code>expo start</code>
+3. start the project using <code>yarn start</code>

@@ -28,6 +28,7 @@ export default function Home(props) {
 		} else {
 			setRetrievedCat(Category[loadedCat])
 		}
+		console.log(Category[loadedCat], "from setRetrievedCat")
 	}, [loadedCat, Products])
 
 	return (

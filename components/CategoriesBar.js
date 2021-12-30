@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native"
 import colors from "../utilities/colors"
 
 const CategoriesBar = ({ categories }) => {
+	console.log("Categories from CategoriesBar", categories)
 	const { category } = categories
 	return (
 		<View style={styles.container}>

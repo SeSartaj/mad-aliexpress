@@ -1,7 +1,8 @@
 function fetchCategories() {
 	// fetch("http://192.168.100:1337/categories", {
 	// return fetch("http://127.0.0.1:1337/categories", {
-	return fetch("http://192.168.100.245:1337/categories", {
+	return fetch("http://10.0.2.2:1337/api/categories", {
+		// return fetch("http://10.135.49.50.245:1337/categories", {
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json",
@@ -14,27 +15,23 @@ async function getCategories() {
 		const categories = []
 		const response = await fetchCategories()
 		const data = await response.json()
-		// console.log(data)
-		data.forEach((item) => {
+		// console.log(data, "from categories module")
+		categories.push({
+			id: 0,
+			category: "All",
+		})
+
+		data["data"].forEach((item) => {
 			categories.push({
 				id: item.id,
-				category: item.category,
+				category: item.attributes.category,
 			})
 		})
 		// console.log(categories, "from module")
-		// console.log(categories, "from bottom of module")
 		return categories
 	} catch (error) {
-		throw new Error("cant load data from server", error)
+		console.warn("cant load categories from server", error)
 	}
 }
 
 export default getCategories
-
-// export default [
-//   { id: 0, category: "All" },
-//   { id: 1, category: "electronics" },
-//   { id: 2, category: "jewelery" },
-//   { id: 3, category: "men's clothing" },
-//   { id: 4, category: "women's clothing" },
-// ];
