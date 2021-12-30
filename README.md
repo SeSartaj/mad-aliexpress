@@ -19,7 +19,6 @@ Password: Door@786
 ### 2. Backend with Strapi
 
 1. <code>cd backend_strapiv4</code>
-2. <code>nvm use 14</code>
-3. <code>yarn install</code>
-4. <code> yarn build</code>
-5. <code>yarn start</code>
+2. <code>yarn install</code>
+3. <code> yarn build</code>
+4. <code>yarn start</code>
