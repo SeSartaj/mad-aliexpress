@@ -6,7 +6,7 @@ Shopping mobile appication created with react native for school work
 
 ## Strapi Credintials
 
-Username: sartaj2dev@gmail.com
+Username: sartaj2dev at gmail dot com
 Password: Door@786
 
 ## How to setup project
