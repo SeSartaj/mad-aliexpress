@@ -4,10 +4,14 @@ Shopping mobile appication created with react native.
 
 ## How to Setup
 
-## Strapi Credintials
-
+## Credintials
+### Strapi Admin 
 Username: sartaj2dev-@-gmail-dot-com
 Password: Door@786
+
+### Mobile app
+email: sartaj@gmail.com
+password: password123
 
 ## How to setup project
 
