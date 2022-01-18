@@ -16,7 +16,9 @@ Password: Door@786
 2. cd mad-aliexpress.git
 3. <code>yarn install</code>
 4. <code>yarn start</code>
-5. optional: <code>Do you want to install it globally [Y/n]? y</code> enter yes
+5. optional: 
+    - <code>Do you want to install it globally [Y/n]? y</code> enter yes. or, 
+    - press a (in the terminal) to open android emulator
 6. then a browser window will open. on the right sidebar click on **'run on Android device/emulator"**
 7. if Android emular is configured on your machine, it shall open. 
 
